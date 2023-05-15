@@ -12,7 +12,6 @@ document.addEventListener(
 )
 
 
-
 export const DayChoice = () => {
     return `
         <h1>What kind of day are you having?</h1>
