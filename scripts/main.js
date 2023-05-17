@@ -7,7 +7,7 @@ const target = document.querySelector("#container")
 
 let UI = ""
 
-const renderMainHTML = () => {
+const renderMainHTML = async () => {
     const dayChoice = getKindOfDay()
 
     if (dayChoice === "") {
@@ -18,11 +18,11 @@ const renderMainHTML = () => {
         UI = GoodDay()
     }
     else if (dayChoice === "bad") {
-        UI = BadDay()
+        UI = await BadDay()
     }
     target.innerHTML = UI
 }
 renderMainHTML()
 
 
-document.addEventListener("dayChosen", renderMainHTML)
+document.addEventListener("stateChanged", renderMainHTML)
